@@ -1,26 +1,102 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F9F6F1;
+  --foreground: #5A3E2B;
+  /* Luxury Villa Color Palette */
+  --primary: #5A3E2B; /* Deep Teak Brown */
+  --secondary: #E8D9C4; /* Warm Sand Beige */
+  --accent: #C8A14E; /* Gold */
+  --neutral: #F9F6F1; /* Off-white */
+  --green-accent: #3C6E47; /* Tropical Palm */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Custom DaisyUI theme */
+[data-theme="luxury"] {
+  --p: 90 55 45; /* Primary - Deep Teak Brown #5A3E2B */
+  --pc: 249 246 241; /* Primary content - Off-white */
+  --s: 232 217 196; /* Secondary - Warm Sand Beige #E8D9C4 */
+  --sc: 90 55 45; /* Secondary content - Deep Teak Brown */
+  --a: 200 161 78; /* Accent - Gold #C8A14E */
+  --ac: 249 246 241; /* Accent content - Off-white */
+  --n: 249 246 241; /* Neutral - Off-white #F9F6F1 */
+  --nc: 90 55 45; /* Neutral content - Deep Teak Brown */
+  --b1: 249 246 241; /* Base-100 - Off-white */
+  --b2: 232 217 196; /* Base-200 - Warm Sand Beige */
+  --b3: 90 55 45; /* Base-300 - Deep Teak Brown */
+  --bc: 90 55 45; /* Base content - Deep Teak Brown */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Custom utility classes */
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.text-neutral {
+  color: var(--neutral);
+}
+
+.text-green-accent {
+  color: var(--green-accent);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.bg-neutral {
+  background-color: var(--neutral);
+}
+
+.bg-green-accent {
+  background-color: var(--green-accent);
+}
+
+.border-accent {
+  border-color: var(--accent);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
 }
