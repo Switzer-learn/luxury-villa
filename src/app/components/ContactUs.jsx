@@ -178,7 +178,7 @@ const ContactUs = () => {
           {/* Get Directions CTA */}
           <motion.button
             onClick={() => window.open("https://maps.google.com/?q=Ubud,Bali,Indonesia", "_blank")}
-            className="btn bg-accent hover:bg-accent/80 text-white border-none px-8 py-4 text-lg font-semibold"
+            className="btn bg-accent rounded-lg hover:bg-accent/80 text-white border-none px-8 py-4 text-lg font-semibold"
             whileHover={{ 
               scale: 1.05, 
               boxShadow: "0 15px 35px rgba(200, 161, 78, 0.4)" 

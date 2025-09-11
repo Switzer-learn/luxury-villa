@@ -8,6 +8,7 @@ import Reservation from "./components/Reservation";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
+import Testimonial from "./components/Testimonial";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <AboutUs />
       <Facilities />
       <Gallery />
+      <Testimonial />
       <Reservation />
       <ContactUs />
       <Footer />
