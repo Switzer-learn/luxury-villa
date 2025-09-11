@@ -9,37 +9,37 @@ const Facilities = () => {
       title: "Infinity Pool",
       description: "An infinity-edge pool that blends seamlessly with Bali's tropical horizon.",
       image: "/image/Outdoor_Seating.png",
-      icon: "🏊‍♂️"
+      
     },
     {
       title: "Spa Treatments",
       description: "Balinese massages, facials, and holistic therapies in serene surroundings.",
       image: "/image/Room.png", // Using available image
-      icon: "🧘‍♀️"
+      
     },
     {
       title: "Fine Dining",
       description: "Exquisite dishes blending local ingredients with global flair.",
       image: "/image/Restaurant.png",
-      icon: "🍽️"
+      
     },
     {
       title: "Private Chef",
       description: "Customized dining experiences tailored to your preferences.",
       image: "/image/Food.png",
-      icon: "👨‍🍳"
+      
     },
     {
       title: "Yoga Pavilion",
       description: "Peaceful open-air space for sunrise meditation or private yoga sessions.",
       image: "/image/Outdoor_Seating_2(sunset).png",
-      icon: "🧘‍♂️"
+      
     },
     {
       title: "Concierge & Transfers",
       description: "From airport pickups to curated island tours, we take care of every detail.",
       image: "/image/Staff.png",
-      icon: "🚗"
+      
     }
   ];
 
