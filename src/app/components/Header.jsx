@@ -28,7 +28,7 @@ const Header = () => {
         <div className="flex items-center h-full">
           <motion.div transition={{ type: "spring", stiffness: 300 }}>
             <Image
-              src="/image/Villa_Logo_Photo.png"
+              src="/image/logo.png"
               alt="Luxury Villa Bali"
               width={60}
               height={60}
