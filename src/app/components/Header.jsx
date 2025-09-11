@@ -37,8 +37,8 @@ const Header = () => {
           </motion.div>
         </div>
 
-        {/* Navigation */}
-        <nav className="flex-1 flex justify-center">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex flex-1 justify-center">
           <ul className="flex gap-8 text-primary font-medium">
             {navItems.map((item, index) => (
               <motion.li
@@ -60,8 +60,8 @@ const Header = () => {
           </ul>
         </nav>
 
-        {/* CTA Button */}
-        <div className="flex items-center h-full">
+        {/* Desktop CTA Button */}
+        <div className="hidden md:flex items-center h-full">
           <motion.a
             href="#reservation"
             className="btn bg-accent hover:bg-accent/80 text-white border-none p-4"
@@ -71,7 +71,63 @@ const Header = () => {
             Reserve Now
           </motion.a>
         </div>
+
+        {/* Hamburger Icon for Mobile */}
+        <div className="md:hidden flex items-center h-full">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="focus:outline-none"
+            aria-label="Open menu"
+          >
+            <motion.div
+              initial={false}
+              animate={isMenuOpen ? { rotate: 90 } : { rotate: 0 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              {/* Simple Hamburger Icon */}
+              <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
+                <rect y="6" width="24" height="2" rx="1" fill="#C8A14E"/>
+                <rect y="11" width="24" height="2" rx="1" fill="#C8A14E"/>
+                <rect y="16" width="24" height="2" rx="1" fill="#C8A14E"/>
+              </svg>
+            </motion.div>
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <motion.div
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -20, opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="md:hidden bg-neutral/95 backdrop-blur-sm shadow-lg absolute top-20 left-0 right-0 z-40"
+        >
+          <ul className="flex flex-col gap-2 px-6 py-4 text-primary font-medium">
+            {navItems.map((item) => (
+              <li key={item.name}>
+                <a
+                  href={item.href}
+                  className="block hover:text-accent transition-colors duration-300 px-3 py-2 rounded-lg"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
+            <li>
+              <a
+                href="#reservation"
+                className="btn bg-accent hover:bg-accent/80 text-white border-none w-full mt-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Reserve Now
+              </a>
+            </li>
+          </ul>
+        </motion.div>
+      )}
     </motion.header>
   );
 };

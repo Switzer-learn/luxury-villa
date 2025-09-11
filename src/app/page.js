@@ -7,11 +7,13 @@ import Gallery from "./components/Gallery";
 import Reservation from "./components/Reservation";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
+      <WhatsAppButton />
       <Hero />
       <HighlightStrip />
       <AboutUs />
