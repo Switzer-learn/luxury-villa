@@ -39,18 +39,19 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex flex-1 justify-center">
-          <ul className="flex gap-8 text-primary font-medium">
+        <nav className="hidden md:flex flex-1 justify-center max-w-full overflow-hidden">
+          <ul className="flex gap-4 lg:gap-8 text-primary font-medium flex-wrap justify-center">
             {navItems.map((item, index) => (
               <motion.li
                 key={item.name}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
+                className="shrink-0"
               >
                 <motion.a
                   href={item.href}
-                  className="hover:text-accent transition-colors duration-300 px-3 py-2 rounded-lg"
+                  className="hover:text-accent transition-colors duration-300 px-2 lg:px-3 py-2 rounded-lg whitespace-nowrap"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >

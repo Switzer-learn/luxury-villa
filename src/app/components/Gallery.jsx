@@ -165,7 +165,8 @@ const Gallery = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex justify-center space-x-3 mt-6 overflow-x-auto pb-2"
+            className="flex justify-center space-x-3 mt-6 overflow-x-auto pb-2 max-w-full"
+            style={{ scrollbarWidth: 'thin' }}
           >
             {images.map((image, index) => (
               <motion.button
